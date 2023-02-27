@@ -1,5 +1,4 @@
 let conditions;
-dataConditions();
 
 
 const apiKey = 'c2c6a891c3354e0a832104345232302'
@@ -44,13 +43,13 @@ async function getWeather(city) {
 }
 
 async function dataConditions() {
-  fetch('https://www.weatherapi.com/docs/conditions.json')
-    .then((response) => response.json())
-    .then((data) => conditions = data)
-
+  const url = ('https://www.weatherapi.com/docs/conditions.json')
+  const response = await fetch(url)
+  conditions = await response.json()
 
   return conditions;
 }
+dataConditions();
 
 // listen for form submission
 form, onsubmit = async function (e) {
