@@ -60,7 +60,6 @@ form, onsubmit = async function (e) {
   let city = input.value.trim();
 
   const data = await getWeather(city)
-  console.log();
 
   if (data.error) {
     removeCard()
