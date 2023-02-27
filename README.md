@@ -1,4 +1,4 @@
-<h1> weather 🌤️
+<h1> Weather 🌤️
 
 <h4>
 <li>JS
