@@ -41,10 +41,17 @@ async function getWeather(city) {
   return data
 }
 
+async function conditionsData() {
+  const url = 'https://www.weatherapi.com/docs/conditions.json'
+  const response = await fetch(url)
+  const data = await response.json()
 
-fetch('https://www.weatherapi.com/docs/conditions.json')
-  .then((response) => response.json())
-  .then((data) => conditions = data)
+  return conditions = data
+}
+
+conditionsData()
+
+
 
 
 // listen for form submission
