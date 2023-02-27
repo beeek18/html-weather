@@ -1,4 +1,4 @@
-import conditions from "./conditions.js"
+let conditions = []
 
 const apiKey = 'c2c6a891c3354e0a832104345232302'
 
@@ -40,6 +40,12 @@ async function getWeather(city) {
 
   return data
 }
+
+
+fetch('https://www.weatherapi.com/docs/conditions.json')
+  .then((response) => response.json())
+  .then((data) => conditions = data)
+
 
 // listen for form submission
 form, onsubmit = async function (e) {
