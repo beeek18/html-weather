@@ -8,10 +8,66 @@
   <title>Weather</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="icon" type="image/x-icon" href="./weather.ico">
-
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
+  <div class="wrapper">
+
+    <header><i class="bx bx-left-arrow-alt"></i>The Weather</header>
+
+    <section class="input-part">
+      <p class="info-txt"></p>
+      <input type="text" placeholder="Enter city name..." spellcheck="false" required>
+      <div class="separator"></div>
+      <button>Get Device Location</button>
+    </section>
+
+    <section class="weather-part">
+      <img src="" alt="Weather icon">
+
+      <div class="temp">
+        <span class="numb"></span>
+        <span class="deg">°</span>С
+      </div>
+
+      <div class="weather"></div>
+
+      <div class="location">
+        <i class="bx bx-map"></i>
+        <span></span>
+      </div>
+
+      <div class="bottom-details">
+
+        <div class="column feels">
+          <i class="bx bxs-thermometer"></i>
+
+          <div class="details">
+            <div class="temp">
+              <span class="numb-2"></span>
+              <span class="deg">°</span>С
+            </div>
+
+            <p>Feels like </p>
+          </div>
+
+        </div>
+
+        <div class="column humidity">
+          <i class="bx bxs-droplet-half"></i>
+
+          <div class="details">
+            <span></span>
+            <p>Humidity</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </div>
 
   <script src="./app.js"></script>
 </body>
